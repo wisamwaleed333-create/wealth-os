@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
+  --font-display: "Cairo", "IBM Plex Sans Arabic", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-navy-950: #070E1A;
+  --color-navy-900: #0B1526;
+  --color-navy-800: #12213B;
+  --color-navy-700: #1D3154;
+  --color-gold-600: #9E7B2C;
+  --color-gold-500: #C8A24A;
+  --color-gold-400: #DDBB6A;
+  --color-gold-100: #F8F2E2;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --surface-canvas: #F4F6FA;
+    --surface-card: #FFFFFF;
+    --surface-subtle: #F8FAFC;
+    --border-hairline: #E2E8F0;
+    --border-subtle: #EEF2F7;
+  }
+
+  :root.dark {
+    color-scheme: dark;
+    --surface-canvas: #060C18;
+    --surface-card: #0D172A;
+    --surface-subtle: #111E35;
+    --border-hairline: #1E2E4A;
+    --border-subtle: #172640;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    direction: rtl;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--surface-canvas);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #C8A24A;
+    outline-offset: 2px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Executive SaaS Hero Surface */
+.hero-wealth-surface {
+  background:
+    radial-gradient(640px circle at 8% 0%, rgba(200, 162, 74, 0.16), transparent 55%),
+    radial-gradient(480px circle at 95% 100%, rgba(56, 189, 248, 0.08), transparent 55%),
+    linear-gradient(135deg, #0B1526 0%, #101F38 55%, #0B1629 100%);
+}
+
+:root.dark .hero-wealth-surface {
+  background:
+    radial-gradient(640px circle at 8% 0%, rgba(221, 187, 106, 0.14), transparent 55%),
+    radial-gradient(480px circle at 95% 100%, rgba(79, 122, 199, 0.11), transparent 55%),
+    linear-gradient(135deg, #0D1A30 0%, #11223E 55%, #0A1527 100%);
+}
+
+/* Reusable SaaS Card & Surface Elevation */
+.saas-card {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-hairline);
+  border-radius: 0.875rem;
+  box-shadow: 0 1px 2px rgba(11, 21, 38, 0.03), 0 1px 1px rgba(11, 21, 38, 0.02);
+}
+
+:root.dark .saas-card {
+  box-shadow: 0 2px 6px rgba(2, 6, 14, 0.35);
+}
+
+.saas-subcard {
+  background-color: var(--surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+}
+
+.saas-input {
+  width: 100%;
+  text-align: right;
+  border-radius: 0.625rem;
+  border: 1px solid #D4DAE6;
+  background-color: #FFFFFF;
+  color: #0B1526;
+  transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+
+.saas-input:focus {
+  outline: none;
+  border-color: #C8A24A;
+  box-shadow: 0 0 0 3px rgba(200, 162, 74, 0.14);
+}
+
+:root.dark .saas-input {
+  border-color: #2A3D5F;
+  background-color: #091222;
+  color: #F1F5F9;
+}
+
+:root.dark .saas-input:focus {
+  border-color: #DDBB6A;
+  box-shadow: 0 0 0 3px rgba(221, 187, 106, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #2D3F5E;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475F87;
+}

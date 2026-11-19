@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>نظام بناء الثروة — إدارة الأموال الشخصية والاستثمارات</title>
+    <meta
+      name="description"
+      content="نظام احترافي لإدارة الأموال الشخصية، الأصول، الالتزامات، الاستثمارات، وبناء الثروة باللغة العربية مع دعم الدينار العراقي والدولار الأمريكي."
+    />
+    <meta property="og:title" content="نظام بناء الثروة — إدارة الأموال الشخصية والاستثمارات" />
+    <meta
+      property="og:description"
+      content="نظام احترافي لإدارة الأموال الشخصية، الأصول، الالتزامات، الاستثمارات، وبناء الثروة باللغة العربية."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0B1526" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="بناء الثروة" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('wealth_os_theme');
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (saved !== 'light' && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#F6F7FA] dark:bg-[#060C18] text-[#0B1526] dark:text-slate-100 antialiased selection:bg-[#C8A24A]/20 selection:text-[#0B1526] dark:selection:text-[#DDBB6A] transition-colors duration-150">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "WEALTH OS",
+  "description": "نظام احترافي لإدارة الأموال الشخصية، الأصول، الالتزامات، الاستثمارات، وبناء الثروة باللغة العربية مع دعم الدينار العراقي والدولار الأمريكي.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
